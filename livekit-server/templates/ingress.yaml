@@ -38,6 +38,10 @@ spec:
   {{- if eq .Values.loadBalancer.type "do" }}
   ingressClassName: nginx
   {{- end }}
+  #Azure
+  {{- if eq .Values.loadBalancer.type "azure"}}
+  ingressClassName: webapprouting.kubernetes.azure.com
+  {{- end}}
   rules:
   # In order to work with cert manager on DO, we cannot set us as a default backend
   {{- range .Values.loadBalancer.tls }}
