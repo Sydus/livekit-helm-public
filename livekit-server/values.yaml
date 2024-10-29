@@ -9,7 +9,7 @@ image:
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
-
+extraDeploy: []
 terminationGracePeriodSeconds: 18000
 
 # configuration for livekit
